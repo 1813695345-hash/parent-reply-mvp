@@ -30,7 +30,7 @@ export default function StartPage() {
           onClick={() => handleNavigate("/generate?scene=teacher")}
           className="absolute top-[10%] left-[39%] w-40 h-16 cursor-pointer
                      flex items-center justify-center
-                     text-base font-bold tracking-wide text-gray-800
+                     text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
         >
           回复老师
@@ -41,7 +41,7 @@ export default function StartPage() {
           onClick={() => handleNavigate("/generate?scene=parent-chat")}
           className="absolute top-[34%] left-[16%] w-44 h-16 cursor-pointer
                      flex items-center justify-center
-                     text-base font-bold tracking-wide text-gray-800
+                     text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
         >
           与同学家长交流心得
@@ -52,7 +52,7 @@ export default function StartPage() {
           onClick={() => handleNavigate("/generate?scene=child")}
           className="absolute top-[62%] left-[25%] w-40 h-16 cursor-pointer
                      flex items-center justify-center
-                     text-base font-bold tracking-wide text-gray-800
+                     text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
         >
           和孩子沟通
