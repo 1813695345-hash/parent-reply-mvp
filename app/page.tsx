@@ -28,7 +28,7 @@ export default function StartPage() {
         {/* 回复老师 */}
         <div
           onClick={() => handleNavigate("/generate?scene=teacher")}
-          className="absolute top-[10%] left-[39%] w-40 h-16 cursor-pointer
+          className="absolute top-[8%] left-[31%] w-40 h-16 cursor-pointer
                      flex items-center justify-center
                      text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
@@ -39,7 +39,7 @@ export default function StartPage() {
         {/* 与同学家长交流心得 */}
         <div
           onClick={() => handleNavigate("/generate?scene=parent-chat")}
-          className="absolute top-[34%] left-[16%] w-44 h-16 cursor-pointer
+          className="absolute top-[31%] left-[6%] w-44 h-16 cursor-pointer
                      flex items-center justify-center
                      text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
@@ -50,7 +50,7 @@ export default function StartPage() {
         {/* 和孩子沟通 */}
         <div
           onClick={() => handleNavigate("/generate?scene=child")}
-          className="absolute top-[62%] left-[25%] w-40 h-16 cursor-pointer
+          className="absolute top-[60%] left-[15%] w-40 h-16 cursor-pointer
                      flex items-center justify-center
                      text-[10px] font-bold tracking-wide text-gray-800
                      active:scale-95 transition-transform duration-150"
