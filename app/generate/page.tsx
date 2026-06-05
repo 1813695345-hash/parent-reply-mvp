@@ -28,6 +28,7 @@ function Home() {
   const [scene, setScene] = useState<Scene | null>(null);
   const [tone, setTone] = useState<Tone>('polite');
   const [input, setInput] = useState('');
+  const [inputType, setInputType] = useState<'scenario' | 'polish'>('scenario');
   const [reply, setReply] = useState('');
   const [safetyWarning, setSafetyWarning] = useState('');
   const [loading, setLoading] = useState(false);
@@ -85,6 +86,7 @@ function Home() {
           tone,
           input: input.trim(),
           action,
+          inputType,
           lastReply: action === 'softer' || action === 'stronger' ? reply : undefined,
         });
 
@@ -131,6 +133,7 @@ function Home() {
     setScene(null);
     setTone('polite');
     setInput('');
+    setInputType('scenario');
     setReply('');
     setSafetyWarning('');
     setError('');
@@ -179,7 +182,12 @@ function Home() {
 
           {/* Input */}
           {scene && (
-            <InputBox value={input} onChange={setInput} />
+            <InputBox
+              value={input}
+              onChange={setInput}
+              inputType={inputType}
+              onInputTypeChange={setInputType}
+            />
           )}
 
           {/* Generate Button */}

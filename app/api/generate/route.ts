@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const { scene, tone, input, action, lastReply } = body;
+    const { scene, tone, input, action, lastReply, inputType } = body;
 
     if (!scene || !tone || !input || !action) {
       return NextResponse.json(
@@ -62,7 +62,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const prompt = buildPrompt(scene, tone, input, action, lastReply);
+    const prompt = buildPrompt(scene, tone, input, action, lastReply, inputType);
     const result = await generateReply({ prompt, temperature: 0.6 });
 
     return NextResponse.json({ reply: result.reply });

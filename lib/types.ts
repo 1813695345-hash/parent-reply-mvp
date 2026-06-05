@@ -21,6 +21,7 @@ export interface GenerateRequest {
   input: string;
   action: Action;
   lastReply?: string;
+  inputType?: 'scenario' | 'polish';
 }
 
 export interface GenerateResponse {
